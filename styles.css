@@ -1,0 +1,62 @@
+:root {
+    --main-bg-color: #D84282;
+}
+
+#menu {
+    color: var(--main-bg-color);
+    /*margin: 500px;*/
+}
+
+#gestreepte-link,
+#gestreepte-link:link,
+#gestreepte-link:visited {
+    font-family: helvetica, sans-serif;
+    font-size: 30px;
+    color: #D84282;
+    text-decoration: none;
+    /*margin: 500px;*/
+}
+
+/* BEGIN STAAT */
+#gestreepte-link::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #D84282;
+    transition: width .35s ease-in-out;
+}
+
+/* EIND STAAT */
+#gestreepte-link::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #D84282;
+    transition: width .35s ease-in-out;
+}
+
+#talkbubble {
+    /*margin: 500px;*/
+    width: 120px;
+    height: 80px;
+    background-color: #D84282;
+    position: relative;
+    border-radius: 10px;
+}
+
+#talkbubble::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 20px solid #D84282;
+    border-bottom: 13px solid transparent;
+}
+
+
